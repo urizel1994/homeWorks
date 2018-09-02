@@ -1,0 +1,1458 @@
+@import url("../fonts/raleway-bold.ttf");
+@import url("../fonts/raleway-regular.ttf");
+@import url("../fonts/roboto-slab-regular.ttf");
+@import url("reset.css");
+
+.container {
+	margin: auto;
+	width: 1170px;
+	box-sizing: border-box;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+body {/*
+	background: url("../bgPopup.jpg") no-repeat;
+	background-position: 50% 0%;*/
+}
+
+/*блок header*/
+
+.header {
+	background: url("../images/sochi.jpg") no-repeat;
+	background-size: cover;
+	background-position:50% 0;
+	position: relative;
+	padding-bottom: 25vh;
+	box-sizing: border-box;
+}
+.mainMenu {
+	width: 22px;
+	margin-top: 34px;
+}
+.menu {
+	position: absolute;
+	width: 420px;
+	height: auto;
+	z-index: 999;
+	top: 60px;
+	background: #003366;
+	padding-left: 45px;
+	padding-top: 55px;
+	box-sizing: border-box;
+	display: none;
+}
+.menuElem {
+	display: block;
+}
+.menuElem a{
+	color: #fff;
+	font-family: "roboto slab";
+	font-size: 19px;
+	margin-top: 5px;
+	line-height: 49px;
+}
+.header .icon {
+	margin-right: 3px;
+}
+.elem {
+	margin-top: 38px;
+	margin-right: 35px; 
+	font-family: "raleway";
+	font-size: 15px;
+}
+.elem:first-child {
+	margin-top: 38px;
+	margin-right: 38px; 
+}
+.elem:last-child {
+	margin-top: 38px;
+	margin-right: 40px; 
+}
+.elem:after {
+	content: "";
+	display: block;
+	float: right;
+	margin-left: 5px;
+	margin-top: 5px;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent; 
+	border-top-color: #003366; 
+}
+.info {
+	margin-top: 30px;
+	font-family: "raleway";
+	font-size: 11px;
+	line-height: 15px;
+	color: #666699;
+	float: right;
+}
+.tel {
+	font-family: "raleway";
+	font-weight: 700;
+	font-size: 16.2px;
+	color: #0d3351;
+}
+.block2 {
+	text-align: center;
+	color: #0d3351;
+}
+.block2 h3 {
+	font-family: "roboto slab";
+	font-size: 39px;
+	margin-top: 5px;
+}
+.block2 h1 {
+	font-family: "roboto slab";
+	font-size: 96.5px;
+	line-height: 173px;
+}
+.button {
+	width: 202px;
+	height: 46px;
+	font-family: "raleway";
+	font-size: 15px;
+	color: #fff;
+	margin-top: 10px;
+	background: #33c7fd;
+	border: 0;
+	outline: none;
+}
+
+
+.logo {
+	margin-top: 24px;
+}
+.line {
+	height: 30vw;
+	width: 20vw;
+	left: 45%;
+	stroke: #003366; 
+	stroke-width: 3; 
+	fill: none;
+	stroke-dasharray: 10 5;
+	position: absolute;
+	z-index: 1;
+}
+/*header блок конец*/
+/*main блок начало*/
+
+.main {
+	text-align: center;
+	background: #f3f3f3;
+	padding-top: 1px;
+	padding-bottom: 62px;
+	position: relative;
+	z-index: 2;
+}
+
+/*popup начало*/
+.mask {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	height: 100vh;
+	width: 100vw; 
+	display: none;
+}
+.popup {
+	position: fixed;
+	width: 852px;
+	height: 692px;
+	padding-left: 49px;
+	padding-top: 118px;
+	box-sizing: border-box;
+	background: #fff;
+	top: 0;
+	left: 18.5%;
+	display: none;
+	z-index: 15;
+}
+.mainImg {
+	width: 361px;
+	height: 240px;
+	
+}
+.minImg {
+	width: 64px;
+	height: 55px;
+	margin-top: 8px;
+	margin-left: 9px;
+	background-size: 50%;
+}
+.first {
+	margin-left: 0;
+}
+.text {
+	text-align: left;
+	margin-left: 392px;
+	font-family: "raleway";
+	font-size: 15.3px;
+}
+.text p {
+	font-family: "raleway";
+	font-size: 15.3px;
+	line-height: 24.2px;
+	margin-top: -10px;
+}
+.titlePopup {
+	color: #00a2dd;
+	font-family: "roboto slab";
+	font-size: 19.5px;
+	position: relative;
+}
+.routePopup {
+	line-height: 0px;
+	color: #003366;
+	font-family: "raleway";
+	font-size: 15.3px;
+	margin-top: 44px;
+	display: block;
+}
+.durationPopup {
+	line-height: 0px;
+	color: #003366;
+	font-family: "raleway";
+	font-size: 15.3px;
+}
+.pricePopup {
+	line-height: 48px;
+	color: #0d3351;
+	font-family: "roboto slab";
+	font-size: 32px;
+}
+.popupButton {
+	width: 202px;
+	height: 46px;
+	font-family: "raleway";
+	font-size: 15px;
+	color: #fff;
+	margin-top: 9px;
+	background: #33ccff;
+	border: 0;
+}
+.timetable {
+	color: #003366;
+	font-family: "raleway";
+	font-size: 15.3px;
+	line-height: 46px;
+}
+/*popup конец*/
+.bold {
+	font-weight: bold;
+}
+.main h3 {
+	font-family: "roboto slab";
+	font-size: 39px;
+	margin-top: 126px;
+	color: #003366;
+}
+.sort {
+	line-height: 42px;
+	color: #003366;
+	font-size: 17px;
+	position: relative;
+}
+.sort span {
+	font-style: italic;
+}
+.sort span:after {
+	content: "";
+	display: block;
+	position: absolute;
+	right: -21px;
+	top: 8px;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent; 
+	border-top-color: #003366; 
+}
+.description{
+	margin-left: 37px;
+	margin-top: 25px;
+}
+.cruises {
+	margin-top: 27px;
+}
+.cruise {
+	text-align: left;
+	background: #ffffff;
+}
+.title {
+	color: #00a2dd;
+	font-family: "roboto slab";
+	font-size: 19.5px;
+	position: relative;
+}
+.title:after {
+	content: "";
+	display: block;
+	right: -22px;
+	top: 10px;
+	width: 0;
+	height: 0;
+	border: 4px solid transparent; 
+	border-left-color: #00a2dd; 
+	position: absolute;
+}
+.route,.duration {
+	color: #003366;
+	font-family: "raleway";
+	font-size: 15.3px;
+}
+.route span,.duration span {
+	font-weight: bold;
+}
+.route {
+	line-height: 40px;
+}
+.price {
+	color: #0d3351;
+	font-family: "roboto slab";
+	line-height: 62px;
+	font-size: 33px;
+}
+.oldPrice {
+	color: #999999;
+	font-size: "roboto slab";
+	font-size: 20px;
+	margin-left: 28px;
+	text-decoration: line-through;
+}
+.anapa {
+	width: 555px;
+	height: 631px;
+	position: relative;
+}
+
+.flag {
+	color: #fff;
+	display: block;
+	width: 50px;
+	height: 100px;
+	border-left: 44px solid #33ccff; 
+	border-right: 44px solid #33ccff; 
+	border-bottom: 20px solid transparent; 
+	box-sizing: border-box;
+	left: 420px; 
+	top: -5px;
+	position: absolute;
+}
+.flag span {
+	font-size: 15px;
+	position: absolute;
+	left: -32px;
+	top: 30px;
+	text-align: center;
+	font-family: "raleway";
+}
+.sochi {
+	width: 555px;
+	height: 305px;
+	margin-left: 30px;
+	position: relative;
+}
+.sochi .flag {
+	border-left: 44px solid #ff0033; 
+	border-right: 44px solid #ff0033; 
+}
+.sochi .flag span {
+	left: -25px;
+}
+.gelengik {
+	width: 555px;
+	height: 305px;
+	margin-left: 30px;
+	margin-top: 21px;
+	position: relative;
+}
+.gelengik .flag {
+	border-left: 44px solid #f20542; 
+	border-right: 44px solid #f20542; 
+}
+.gelengik .flag span {
+	left: -30px;
+}
+.novorossiysk {
+	width: 555px;
+	height: 409px;
+	margin-top: 21px;
+}
+.lake {
+	width: 555px;
+	height: 409px;
+	margin-left: 30px;
+	margin-top: 21px;
+}
+.main .button {
+	margin-top: 20px;
+}
+/*main блок конец*/
+/*footer блок начало*/
+
+.footer a {
+	color: #003366;
+	font-family: "raleway"; 
+	font-size: 15.2px;
+	line-height: 23px;
+}
+.fMenu {
+	margin-top: 25px;
+	float: left;
+}
+.share {
+	float: left;
+	margin-left: 150px;
+	margin-top: 25px;
+}
+.share span {
+	color: #003366;
+	font-family: "raleway"; 
+	font-size: 15.2px;
+	line-height: 23px;
+}
+.social {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #003366;
+	text-align: center;
+	display: inline-block;
+	line-height: 32px;
+	margin-top: 4px;
+	margin-left: 5.5px;
+}
+.tablet {
+	display: none;
+}
+.dev {
+	display: block;
+}
+.mobile {
+	display: none;
+}
+.vk {
+	margin-left: 0;
+}
+
+.copyright {
+	font-family: "raleway";
+	font-size: 15.3px;
+	color: #0d3351;
+	line-height: 40px;
+}
+/*footer блок конец*/
+
+@media(max-width: 1170px){
+	.html {
+		width: 100%;
+	}
+	.container {
+		padding-left: 1.3%;
+		padding-right: 1.3%;
+		margin-left: 0;
+		width: 100%;
+	}
+	.header {
+		width: 130vw;
+		padding-bottom: 23vh;
+	}
+	.line {
+		top: 62vh;
+	}
+	.main {
+		width: 130vw;
+	}
+	.footer {
+		width: 130vw;
+	}
+	.cruise {
+		width: 48.7%;
+		padding-bottom: 3.5vw;
+	}
+	.anapa {
+		padding-bottom: 7vw;
+	}
+	.cruise img {
+		width: 100%;
+	}
+}
+
+@keyframes showMenu {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: 415px;
+	}
+}
+@keyframes showLink {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media(max-width: 1024px){
+	.container {
+		margin: auto;
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+	.header .mobile {
+		display: none;
+	}
+	.mask {
+		width: 130vw;
+		height: 150vh;
+	}
+	/*блок header*/
+	.header {
+		padding-bottom: 27vh;
+	}
+	.mainMenu {
+		width: 3.1%;
+		margin-top: 4.3vh;
+	}
+	.menu {
+		top: 7vh; 
+	}
+	.header .icon {
+		margin-right: 3px;
+		width: 1.6vw;
+	}
+	.elem {
+		margin-top: 5.1vh;
+		margin-right: 4.9%; 
+		font-family: "raleway";
+		font-size: 1.9vh;
+	}
+	.elem:first-child {
+		margin-top: 5.1vh;
+		margin-right: 5.4%; 
+	}
+	.elem:last-child {
+		margin-top: 5.1vh;
+		margin-right: 6.2%; 
+	}
+	.elem:after {
+		content: "";
+		display: block;
+		float: right;
+		margin-left: 1.1vw;
+		margin-top: 5px;
+		border: 8px solid transparent; 
+		border-top-color: #003366;
+	}
+	.info {
+		margin-top: 3.7vh;
+		font-size: 1.4vh;
+		line-height: 2.1vh;
+	}
+	.tel {
+		font-size: 2vh;
+	}
+	.block2 h3 {
+		font-size: 3.6vh;
+		margin-top: 1vh;
+	}
+	.block2 h1 {
+		font-size: 9vh;
+		line-height: 11vh;
+	}
+	.button {
+		width: 35vw;
+		height: 7.1vh;
+		font-size: 2vh;
+		margin-top: 0px;
+	}
+
+	.logo {
+		margin-top: 10.5vh;
+		width: 10%;
+	}
+	.line {
+		height: 40vh;
+		width: 20vw;
+		left: 45%;
+		stroke: #003366; 
+		stroke-width: 6; 
+		fill: none;
+		stroke-dasharray: 15 5;
+		position: absolute;
+		z-index: 999;
+		top: 51vh;
+	}
+	/*header блок конец*/
+	/*main блок начало*/
+
+	.main {
+		padding-top: 1px;
+		padding-bottom: 62px;
+	}
+	.popup {
+		position: absolute;
+		width: 721px;/*111*/
+		height: 692px;/*111*/
+		padding-left: 66px;/*111*/
+		padding-right: 30px;/*111*/
+		padding-top: 118px;
+		box-sizing: border-box;
+		top: 230px;
+		left: 23.3%;/*111*/
+		z-index: 9999;
+		background: #fff;
+	}
+	.mainImg {
+		width: 284px;/*111*/
+		height: 186px;/*111*/
+		
+	}
+	.minImg {
+		width: 67px;/*111*/
+		height: 45px;/*111*/
+		margin-top: 5px;/*111*/
+		margin-left: 5.3px;/*111*/
+
+	}
+	.minImg.first {
+		margin-left: 0;
+	}
+	.text {
+		text-align: left;
+		margin-left: 309px;
+		font-family: "raleway";
+		font-size: 15.3px;
+	}
+	.text p {
+		font-family: "raleway";
+		font-size: 15.3px;
+		line-height: 24.2px;
+		margin-top: -10px;
+	}
+	.titlePopup {
+		color: #00a2dd;
+		font-family: "roboto slab";
+		font-size: 19.5px;
+		position: relative;
+	}
+	.routePopup {
+		line-height: 0px;
+		color: #003366;
+		font-family: "raleway";
+		font-size: 15.3px;
+		margin-top: 44px;
+		display: block;
+	}
+	.durationPopup {
+		line-height: 0px;
+		color: #003366;
+		font-family: "raleway";
+		font-size: 15.3px;
+	}
+	.pricePopup {
+		line-height: 48px;
+		color: #0d3351;
+		font-family: "roboto slab";
+		font-size: 32px;
+	}
+	.popupButton {
+		width: 202px;
+		height: 46px;
+		font-family: "raleway";
+		font-size: 15px;
+		color: #fff;
+		margin-top: 9px;
+		background: #33ccff;
+		border: 0;
+	}
+	.timetable {
+		color: #003366;
+		font-family: "raleway";
+		font-size: 15.3px;
+		line-height: 46px;
+	}
+	.main h3 {
+		font-family: "roboto slab";
+		font-size: 3.6vh;/*111*/
+		margin-top: 8vh;/*111*/
+		color: #003366;
+	}
+	.sort {
+		line-height: 32px;/*111*/
+		color: #003366;
+		font-size: 2.3vh;/*111*/
+		position: relative;
+	}
+	.sort span {
+		font-style: italic;
+	}
+	.sort span:after {
+		content: "";
+		display: block;
+		position: absolute;
+		right: -21px;
+		top: 8px;
+		width: 0;
+		height: 0;
+		border: 5px solid transparent; 
+		border-top-color: #003366; 
+	}
+	.description {
+		margin-left: 10%;
+		padding-right: 3%;
+	}
+	.cruises {
+		margin-top: 5.5vh;
+	}
+	.cruise {
+		text-align: left;
+		background: #fff;
+		box-sizing: border-box;
+	}
+	.title {
+		color: #00a2dd;
+		font-family: "roboto slab";
+		font-size: 2.5vh;
+		position: relative;
+		margin-top: .5vh;
+	}
+	.novorossiysk .description {
+		margin-top: 3vh;
+		padding-right: 5%;
+	}
+	.sochi .description {
+		margin-top: 3vh;
+		padding-right: 5%;
+	}
+	.gelengik .description {
+		margin-top: 3vh;
+		padding-right: 5%;
+	}
+	.title:after {
+		content: "";
+		display: block;
+		right: -22px;
+		top: 10px;
+		width: 0;
+		height: 0;
+		border: 4px solid transparent; 
+		border-left-color: #00a2dd; 
+		position: absolute;
+	}
+	.route,.duration {
+		color: #003366;
+		font-family: "raleway";
+		font-size: 2vh;
+	}
+	.route span,.duration span {
+		font-weight: bold;
+	}
+	.route {
+		line-height: 40px;
+	}
+	.sochi .route {
+		line-height: 4vh;
+		margin-top: 1vh;
+	}
+	.novorossiysk .route {
+		line-height: 4vh;
+		margin-top: 1vh;
+	}
+	.gelengik .route {
+		line-height: 4vh;
+		margin-top: 1vh;
+	}
+	.gelengik .price {
+		color: #0d3351;
+		font-family: "roboto slab";
+		line-height: 17vh;
+		font-size: 4.2vh;
+	}
+
+	.price {
+		color: #0d3351;
+		font-family: "roboto slab";
+		line-height: 11vh;
+		font-size: 4.2vh;
+	}
+	.oldPrice {
+		color: #999999;
+		font-size: "roboto slab";
+		font-size: 2vh;
+		margin-left: 28px;
+		text-decoration: line-through;
+	}
+	.anapa {
+		width: 48%;/*111*/
+		height: 62.5vh;/*111*/
+		position: relative;
+	}
+	.anapa img {/*111*/
+		width: 100%;
+	}
+	.flag {
+		color: #fff;
+		display: block;
+		width: 50px;
+		height: 100px;
+		border-left: 44px solid #33ccff; 
+		border-right: 44px solid #33ccff; 
+		border-bottom: 20px solid transparent; 
+		box-sizing: border-box;
+		left: 29vh;/*111*/
+		top: -1.5vh;/*111*/
+		position: absolute;
+	}
+	.flag span {
+		font-size: 1.5vh;
+		position: absolute;
+		left: -4.5vw;
+		top: 30px;
+		text-align: center;
+		font-family: "raleway";
+	}
+	.sochi {
+		width: 48%;/*111*/
+		height: 62.7vh;/*111*/
+		margin-left: 4%;
+		position: relative;
+	}
+	.sochi img {/*111*/
+		width: 100%;
+	}
+	.sochi .flag {
+		border-left: 44px solid #33ccff; 
+		border-right: 44px solid #33ccff; 
+	}
+	.sochi .flag span {
+		left: -5vw;
+	}
+	.gelengik {
+		width: 48%;/*111*/
+		height: 63vh;/*111*/
+		margin-left: 0px;/*111*/
+		margin-top: 6.5vh;
+		position: relative;
+	}
+	.gelengik img {/*111*/
+		width: 100%;
+	}
+	.gelengik .flag {
+		border-left: 44px solid #f20542; 
+		border-right: 44px solid #f20542; 
+	}
+	.gelengik .flag span {
+		left: -5vw;
+	}
+	.novorossiysk {
+		width: 48%;/*111*/
+		height: 63vh;/*111*/
+		margin-top: 6.5vh;
+		margin-left: 4%;/*111*/
+	}
+	.novorossiysk img {/*111*/
+		width: 100%;
+	} 
+	.lake {
+		width: 345px;/*111*/
+		height: 510px;/*111*/
+		margin-left: 30px;
+		margin-top: 21px;
+		display: none;/*111*/
+	}
+	.main .button {
+		margin-top: 6vh;
+	}
+	/*main блок конец*/
+	/*footer блок начало*/
+	.footer {
+		padding-bottom: 2vh;
+	}
+	.footer a {
+		color: #003366;
+		font-family: "raleway"; 
+		font-size: 2vh;
+		line-height: 3vh;
+	}
+	.fMenu {
+		margin-top: 4vh;/*111*/
+		float: left;
+	}
+	.share {
+		float: left;
+		margin-left: 12vw;/*111*/
+		margin-top: 4vh;/*111*/
+	}
+	.share span {
+		color: #003366;
+		font-family: "raleway"; 
+		font-size: 1.9vh;
+		line-height: 1vh;
+	}
+	.social {
+		width: 6vw;
+		height: 6vw;
+		border-radius: 50%;
+		background: #003366;
+		text-align: center;
+		display: inline-block;
+		line-height: 32px;
+		margin-top: 2vh;
+		margin-left: 5.5px;
+	}
+	.social img {
+		width: 25%;
+		margin-top: 0%;
+	}
+	.vk {
+		margin-left: 0%;/*111*/
+	}
+	.vk img {
+		width: 45%;
+		margin-top: 20%;
+	}
+	.insta img {
+		width: 35%;
+		margin-top: 20%;
+	}
+	.vk {
+		margin-left: 0;
+	}
+	.dev {
+		display: none;
+	}
+	.mobile {
+		display: none;
+	}
+	.tablet {
+		display: block;
+	}
+	.copyright {
+		font-family: "raleway";
+		font-size: 2vh;
+		color: #0d3351;
+		line-height: 5vh;
+	}
+	.footer .info {
+		margin-top: 4vh;
+		float: right;
+	}
+}
+@media(max-width: 415px){
+	.container {
+		margin: auto;
+		box-sizing: border-box;
+		padding-left: 4.68%;/*111*/
+		padding-right: 8%;/*111*/
+		width: 160vw;
+	}
+	.floatLeft {
+		float: left;
+	}
+	.floatRight {
+		float: right;
+	}
+	.clearfix:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	}
+	.dev {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+	.header .tablet {
+		display: none;
+	}
+	body {/*
+		background: url("../mobile.jpg") no-repeat;
+		background-position: 50% 0%;
+		background-size: contain;*/
+	}
+	/*блок header*/
+
+	.header {
+		background: url("../images/sochi.jpg") no-repeat;
+		background-position:50% 0;
+		background-size: cover;/*111*/
+		position: relative;
+		padding-bottom: 40vh;/*111*/
+		box-sizing: border-box;
+		width: 170vw;
+	}
+	.mainMenu {
+		width: 7.5%;
+		margin-top: 5vh;/*111*/
+	}
+	.menu {
+		position: absolute;
+		width: 420px;
+		height: 415px;
+		z-index: 999;
+		top: 60px;
+		background: rgba(30,80,120,0.4);
+		padding-left: 45px;
+		padding-top: 55px;
+		display: none;
+		box-sizing: border-box;
+	}
+	.menuElem a{
+		color: #fff;
+		font-family: "roboto slab";
+		font-size: 19px;
+		margin-top: 5px;
+		line-height: 49px;
+	}
+	.header .icon {
+		margin-right: 3px;
+	}
+	.elem {
+		margin-top: 38px;
+		margin-right: 35px; 
+		font-family: "raleway";
+		font-size: 15px;
+	}
+	.elem:first-child {
+		margin-top: 38px;
+		margin-right: 38px; 
+	}
+	.elem:last-child {
+		margin-top: 38px;
+		margin-right: 40px; 
+	}
+	.elem:after {
+		content: "";
+		display: block;
+		float: right;
+		margin-left: 5px;
+		margin-top: 5px;
+		width: 0;
+		height: 0;
+		border: 5px solid transparent; 
+		border-top-color: white; 
+	}
+	.info {
+		margin-top: 2vh;/*111*/
+		font-family: "raleway";
+		font-size: .7vh;/*111*/
+		line-height: 3vh;/*111*/
+		color: #666699;
+	}
+	.tel {
+		font-family: "raleway";
+		font-weight: 700;
+		font-size: 2vh;/*111*/
+		color: #0d3351;
+	}
+	.block2 {
+		text-align: center;
+		color: #0d3351;
+	}
+	.block2 h3 {
+		font-family: "roboto slab";
+		font-size: 6.3vw;/*111*/
+		margin-top: 1.7vh;/*111*/
+	}
+	.block2 h1 {
+		font-family: "roboto slab";
+		font-size: 15vw;/*111*/
+		line-height: 9vh;/*111*/
+		margin-top: 1vh;/*111*/
+	}
+	.button {
+		width: 70%;
+		height: 9vh;
+		font-family: "raleway";
+		font-size: 2.7vh;
+		color: #fff;
+		margin-top: 6.2vh;
+		background: #33ccff;
+		border: 0;
+	}
+
+	.logo {
+		width: 24%;/*111*/
+		margin-top: -3vh;/*111*/
+	}
+	.line {
+		height: 120vh;/*111*/
+		width: 100vw;/*111*/
+		left: 38%;
+		stroke: #003366; 
+		stroke-width: 6; /*111*/
+		fill: none;
+		stroke-dasharray: 30 10;/*111*/
+		position: absolute;
+		z-index: 999;
+		top: 68vh;
+	}
+	/*header блок конец*/
+	/*main блок начало*/
+
+	.main {
+		text-align: center;
+		background: #f3f3f3;
+		padding-top: 2vh;/*111*/
+		padding-bottom: 62px;
+		position: relative;
+		z-index: 2;
+		width: 170vw;
+	}
+	.popup {
+		position: absolute;
+		width: 852px;
+		height: 692px;
+		padding-left: 49px;
+		padding-top: 118px;
+		box-sizing: border-box;
+		top: 230px;
+		left: 18.5%;
+	}
+	.mainImg {
+		width: 361px;
+		height: 240px;
+		background: url("../images/sea-1.jpg");
+	}
+	.minImg {
+		width: 83.5px;
+		height: 55px;
+		margin-top: 8px;
+		margin-left: 9px;
+		background: url("../images/sea-1.jpg");
+	}
+	.minImg.first {
+		margin-left: 0;
+	}
+	.text {
+		text-align: left;
+		margin-left: 392px;
+		font-family: "raleway";
+		font-size: 15.3px;
+	}
+	.text p {
+		font-family: "raleway";
+		font-size: 15.3px;
+		line-height: 24.2px;
+		margin-top: -10px;
+	}
+	.titlePopup {
+		color: #00a2dd;
+		font-family: "roboto slab";
+		font-size: 19.5px;
+		position: relative;
+	}
+	.routePopup {
+		line-height: 0px;
+		color: #003366;
+		font-family: "raleway";
+		font-size: 15.3px;
+		margin-top: 44px;
+		display: block;
+	}
+	.durationPopup {
+		line-height: 0px;
+		color: #003366;
+		font-family: "raleway";
+		font-size: 15.3px;
+	}
+	.pricePopup {
+		line-height: 48px;
+		color: #0d3351;
+		font-family: "roboto slab";
+		font-size: 32px;
+	}
+	.popupButton {
+		width: 202px;
+		height: 46px;
+		font-family: "raleway";
+		font-size: 15px;
+		color: #fff;
+		margin-top: 9px;
+		background: #33ccff;
+		border: 0;
+	}
+	.timetable {
+		color: #003366;
+		font-family: "raleway";
+		font-size: 15.3px;
+		line-height: 46px;
+	}
+	.bold {
+		font-weight: bold;
+	}
+	.main h3 {
+		font-family: "roboto slab";
+		font-size: 6.8vw;/*111*/
+		margin-top: 4.2vh;/*111*/
+		color: #003366;
+	}
+	.sort {
+		line-height: 6vh;
+		color: #666666;
+		font-size: 2vh;
+		position: relative;
+		margin-left: -1vw;
+	}
+	.sort span {
+		font-style: italic;
+	}
+	.sort span:after {
+		content: "";
+		display: block;
+		position: absolute;
+		right: -5vw;
+		top: 1.8vh;
+		width: 0;
+		height: 0;
+		border: 5px solid transparent; 
+		border-top-color: #003366; 
+	}
+	.description{
+		margin-left: 8%;
+		margin-top: 25px;
+	}
+	.cruises {
+		margin-top: 3.5vh;
+	}
+	.cruise {
+		text-align: left;
+		background: #ffffff;
+	}
+	.title {
+		color: #00a2dd;
+		font-family: "roboto slab";
+		font-size: 3.4vh;
+		position: relative;
+		line-height: 4vh;
+	}
+	.titleMobile {
+		color: #00a2dd;
+		font-family: "roboto slab";
+		font-size: 3.4vh;
+		position: relative;
+		line-height: 4vh;
+	}
+	.title:after {
+		content: "";
+		display: block;
+		right: -22px;
+		top: 10px;
+		width: 0;
+		height: 0;
+		border: 4px solid transparent; 
+		border-left-color: #00a2dd; 
+		position: absolute;
+	}
+	.route,.duration {
+		color: #003366;
+		font-family: "raleway";
+		font-size: 2vh;
+	}
+	.route span,.duration span {
+		font-weight: bold;
+	}
+	.route {
+		line-height: 5.5vh;/*111*/
+	}
+	.duration {
+		line-height: 0vh;
+	}
+	.price {
+		color: #0d3351;
+		font-family: "roboto slab";
+		line-height: 12vh;/*111*/
+		font-size: 5.7vh;/*111*/
+	}
+	.oldPrice {
+		color: #999999;
+		font-size: "roboto slab";
+		font-size: 3vh;/*111*/
+		margin-left: 28px;
+		text-decoration: line-through;
+	}
+	.anapa {
+		width: 100%;/*111*/
+		height: auto;/*111*/
+		position: relative;
+	}
+	.anapa img {/*111*/
+		width: 100%;
+	}
+	.flag {
+		color: #fff;
+		display: block;
+		width: 50px;
+		height: 100px;
+		border-left: 44px solid #33ccff; 
+		border-right: 44px solid #33ccff; 
+		border-bottom: 20px solid transparent; 
+		box-sizing: border-box;
+		left: 420px; 
+		top: -5px;
+		position: absolute;
+	}
+	.flag span {
+		font-size: 15px;
+		position: absolute;
+		left: -32px;
+		top: 30px;
+		text-align: center;
+		font-family: "raleway";
+	}
+	.sochi {
+		width: 100%;/*111*/
+		height: auto;/*111*/
+		margin-left: 0px;/*111*/
+		position: relative;
+		margin-top: 8.1vh;/*111*/
+	}
+	.sochi .description {/*111*/
+		margin-top: 4vh;
+	}
+	.sochi img {/*111*/
+		width: 100%;
+	}
+	.sochi .flag {
+		border-left: 44px solid #ff0033; 
+		border-right: 44px solid #ff0033; 
+	}
+	.sochi .flag span {
+		left: -25px;
+	}
+	.gelengik {
+		width: 100%;/*111*/
+		height: auto;/*111*/
+		margin-top: 7.8vh;/*111*/
+		position: relative;
+	}
+	.gelengik img {/*111*/
+		width: 100%;
+	}
+	.gelengik .description {/*111*/
+		margin-top: 4.1vh;
+	}
+	.gelengik .duration {/*111*/
+		line-height: 4vh;
+	}
+	.gelengik .price {/*111*/
+		line-height: 20vh;
+	}
+	.gelengik .flag {
+		border-left: 44px solid #f20542; 
+		border-right: 44px solid #f20542; 
+	}
+	.gelengik .flag span {
+		left: -30px;
+	}
+	.novorossiysk {
+		width: 100%;/*111*/
+		height: auto;/*111*/
+		margin-top: 3.5vh;/*111*/
+		margin-left: 0vw;
+	}
+	.novorossiysk img {/*111*/
+		width: 100%;
+	} 
+	.novorossiysk .description {/*111*/
+		margin-top: 4vh;
+	}
+	.lake {
+		width: 555px;
+		height: 409px;
+		margin-left: 30px;
+		margin-top: 21px;
+		display: none;/*111*/
+	}
+	.main .button {
+		margin-top: 8vh;/*111*/
+	}
+	/*main блок конец*/
+	/*footer блок начало*/
+	.footer {
+		text-align: center;/*1111*/
+		padding-top: 15vh;/*1111*/
+	}
+	.footer a {
+		color: #003366;
+		font-family: "raleway"; 
+		font-size: 15.2px;
+		line-height: 23px;
+	}
+	.fMenu {
+		margin-top: 25px;
+		float: left;
+		display: none;/*1111*/
+	}
+	.share {
+		float: left;
+		width: 100%;
+		margin-top: -12.5vh;/*1111*/
+		margin-left: 11vw;
+	}
+	.share span {
+		color: #003366;
+		font-family: "raleway"; 
+		font-size: 2.6vh;/*1111*/
+		line-height: 0vh;/*1111*/
+		margin-left: -20vw;
+	}
+	.social {
+		width: 10vw;/*111*/
+		height: 10vw;/*111*/
+		border-radius: 50%;
+		background: #003366;
+		text-align: center;
+		float: left;/*111*/
+		line-height: 32px;/*111*/
+		margin-top: 2vh;/*111*/
+		margin-left: 2.5%;
+		vertical-align: middle;
+	}
+	.social img {
+		width: 40%;
+		margin-top: 20%;
+	}
+	.vk {
+		margin-left: 24%;/*111*/
+
+	}
+	.vk img {
+		width: 50%;
+		margin-top: 40%;
+	}
+	.insta img {
+		width: 50%;
+		margin-top: 30%;
+	}
+	.copyright {
+		font-family: "raleway";
+		font-size: 1.3vh;
+		color: #0d3351;
+		line-height: 10vh;
+		margin-top: -10vh;
+	}
+	.footer .info{
+		float: none;
+	}
+	.info {
+		font-size: 2vh;
+	}
+	/*footer блок конец*/
+
+}
