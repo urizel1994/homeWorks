@@ -1,0 +1,176 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	background: #51835D;
+	width: 399px;
+	position: relative;
+	height: 357px;
+	perspective: 250px;
+	margin: 100px auto;
+}
+/*/////////////// УШИ BEGIN///////////////*/
+
+.ear {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background: #917F69;
+	position: absolute;
+}
+.ear:before {
+	content: "";
+	display: block;
+	width: 45px;
+	height: 45px;
+	margin-left: 21px;
+	margin-top: 20px;
+	border-radius: 50%;
+	background: #DDDCB0;
+}
+.ear.left {
+	left: 68px;
+	top: 68px;
+}
+.ear.right {
+	right: 65px;
+	top: 53px;
+}
+
+/*/////////////// УШИ END///////////////*/
+/*/////////////// ГОЛОВА BEGIN///////////////*/
+
+.rect_main {
+	background: #917F69;
+	width: 203px;
+	height: 212px;
+	left: 102px;
+	bottom: 68px;
+	position: absolute;
+	border-top-left-radius: 35%;
+	border-top-right-radius: 35%;
+	transform: rotateX(6deg);
+}
+
+.line {
+	width: 3px;
+	height: 18px;
+	background: #DDDCB0;
+	position: absolute;
+	left: 90px;
+	top: 12px;
+	transform: rotate(20deg);
+	border-radius: 25%;
+}
+.line:before,.line:after {
+	content: "";
+	width: 3px;
+	height: 18px;
+	background: #DDDCB0;
+	display: block;
+	position: absolute;
+	border-radius: 25%;
+}
+.line:before {
+	left: 7px;
+	top: -2.5px;
+}
+.line:after {
+	left: 14px;
+	top: -5px;
+}
+
+/*/////////////// ГЛАЗА BEGIN///////////////*/
+
+.eye {
+	width: 21px;
+	height: 15px;
+	background: #000;
+	border-radius: 21px/15px;
+}
+.eye.left {
+	position: absolute;
+	left: 50px;
+	top: 65px;
+}
+.eye.right {
+	position: absolute;
+	left: 131px;
+	top: 65px;
+}
+.eye:before {
+	content: "";
+	width: 4px;
+	height: 2px;
+	background: #fff;
+	display: block;
+	position: absolute;
+	right: 4px;
+	top: 4px;
+}
+
+/*/////////////// ГЛАЗА ENDN///////////////*/
+/*/////////////// НОС BEGIN///////////////*/
+.rect_small {
+	background: #DDDCB0;
+	width: 90px;
+	height: 110px;
+	position: absolute;
+	left: 158px;
+	bottom: 105px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+.rect_nose {
+	background: #000;
+	width: 50px;
+	height: 41px;
+	position: absolute;
+	left: 20px;
+	bottom: 54px;
+	border-radius: 40%;
+}
+.rect_nose:before {
+	content: "";
+	background: #fff;
+	width: 10px;
+	height: 3px;
+	position: absolute;
+	left: 28px;
+	bottom: 27px;
+	display: block;
+}
+
+/*/////////////// НОС END///////////////*/
+/*/////////////// РОТ BEGIN///////////////*/
+
+.mouth {
+	width: 5px;
+	height: 23px;
+	position: absolute;
+	background: #000;
+	left: 43px;
+	bottom: 31px;
+}
+.mouth:before, .mouth:after {
+	content: "";
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	position: absolute;
+	display: block;
+	border: 5px solid #000;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	transform: rotate(45deg);
+}
+.mouth:before {
+	left: -35px;
+}
+
+/*/////////////// РОТ END///////////////*/
+/*/////////////// ГОЛОВА END///////////////*/
