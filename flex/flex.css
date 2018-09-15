@@ -1,0 +1,32 @@
+.container {
+	display: -webkit-flex; 
+	display: flex; 
+	width: 1170px;
+	height: 120vh;
+	margin: 0 auto;
+	padding: 1%;
+	border: 1px solid black;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.item {
+	width: 48%;
+	background: lightgreen;
+	border: 1px solid black;
+	box-sizing: border-box;
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+}
+.item_small {
+	height: 23%;
+	flex-wrap: nowrap;
+	margin-bottom: 1%;
+}
+.item_big {
+	height: 47.5%;
+	margin-bottom: 1%;
+}

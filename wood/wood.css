@@ -1,0 +1,122 @@
+body {
+	/*background: url("elka.jpg") no-repeat;*/
+}
+.container {
+	background: #E0F0E5;
+	width: 398px;
+	height: 400px;
+	margin: 46px 47px; 
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.ground {
+	background: #BBD5C3;
+	width: 46px;
+	height: 4px;
+	animation: move_ground 4s linear forwards;
+}
+.wood {
+	background: #E7C87E;
+	width: 4px;
+	height: 197px;
+	margin-top: -144px; 
+	position: relative;
+}
+.wood:before {
+	content: "";
+	display: block;
+	background: #E7C87E;
+	width: 4px;
+	height: 58px;
+	position: absolute;
+	transform: rotate(-40deg);
+	right: 18px;
+	bottom: 50px;
+}
+.wood:after {
+	content: "";
+	display: block;
+	background: #E7C87E;
+	width: 4px;
+	height: 50px;
+	position: absolute;
+	transform: rotate(40deg);
+	left: 16px;
+	bottom: 79px;
+}
+.brunch {
+	display: block;
+	background: #E7C87E;
+	width: 4px;
+	height: 40px;
+	position: absolute;
+	transform: rotate(-40deg);
+	right: 13px;
+	top: 45px;
+}
+.brunch:before {
+	content: "";
+	display: block;
+	background: #E7C87E;
+	width: 4px;
+	height: 31px;
+	position: absolute;
+	transform: rotate(80deg);
+	left: 34px;
+	bottom: 10px;
+}
+.brunch:after {
+	content: "";
+	display: block;
+	background: #E7C87E;
+	width: 4px;
+	height: 23px;
+	position: absolute;
+	left: 38px;
+	bottom: 44px;
+}
+.foliage {
+	width: 0; 
+	height: 0;
+	border-left: 0px solid transparent;
+	border-right: 0px solid transparent;
+	border-bottom: 206px solid red;
+	margin-top: 56px;
+	animation: move_foliage 4s;
+	animation-delay: 4s;
+}
+
+@keyframes move_ground{
+	0% {
+		width: 46px;	
+	}
+	25% { 
+		width: 90px;
+	}
+	75% {
+		width: 72px;
+	}
+	100% {
+		width: 76px;
+	}
+}
+@keyframes move_foliage {
+	0% {
+		border-left-width: 0px;
+		border-right-width: 0px;	
+	}
+	25% { 
+		border-left-width: 68px;
+		border-right-width: 68px;	
+	}
+	50% {
+		border-left-width: 64px;
+		border-right-width: 64px;
+	}
+	100% {
+		border-left-width: 66px;
+		border-right-width: 66px;
+	}
+}
