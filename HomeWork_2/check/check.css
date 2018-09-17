@@ -1,0 +1,71 @@
+
+.container {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	margin-top: 50px;
+	background: rgba(231,121,22,0.5);
+	position: relative;
+	overflow: hidden;
+}
+.wrap {
+	margin-left: 56px;
+}
+.mask {
+	background: linear-gradient(90deg, #9A59B5 0%, #9A59B5 33.3% , #3598DB 33.3%, #3598DB 66.6%, #1BBC9B 66.6% );
+	width: 1200px;
+	height: 400px;
+	left: 0;
+	top: 0;
+	position: absolute;
+	transition: background-position .5s;
+}
+input[type="radio"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+input[type="radio"] ~ label {
+  position: relative;
+  cursor: pointer;
+  margin-left: 60px;
+}
+input[type="radio"] ~ label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-top: 175px;
+}
+input[type="radio"] ~ .check1:after {
+  content: "";
+  position: absolute;
+  left: 4.4px;
+  top: 179.4px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform .5s;
+}
+.r1:checked ~ .check1:after {
+  transform: translateX(0px);
+}
+.r2:checked ~ .check1:after {
+  transform: translateX(60.5px);
+}
+.r3:checked ~ .check1:after {
+  transform: translateX(120px);
+}
+.r1:checked ~ .mask {
+	background-position: 0px 0;
+}
+.r2:checked ~ .mask {
+	background-position: -400px 0;
+}
+.r3:checked ~ .mask {
+	background-position: -800px 0;
+}
