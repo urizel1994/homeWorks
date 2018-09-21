@@ -1,0 +1,28 @@
+.container {
+  width: 401px;
+  height: 400px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 75px;
+  box-shadow: 2px 2px 5px gray;
+}
+.block {
+  flex-basis: 25%;
+  font-size: 0px;
+  background: #34495E;
+  height: 100%;
+  color: transparent;
+  font-weight: bold;
+  font-family: "Arial";
+  transition: flex-basis .5s, color .5s, font-size .5s;
+  text-align: center;
+  line-height: 405px;
+} 
+.first,.third {
+  background: #E67F22;
+}
+.block:hover {
+  flex-basis: 125%;
+  color: white;
+  font-size: 28px;
+}

@@ -1,0 +1,90 @@
+body {
+  font-family: "Arial";
+  color: #4D6F73;
+}
+.container {
+  background: #FDB731;
+  margin: 0 auto;
+  margin-top: 75px;
+  width: 399px;
+  height: 400px;
+  border-top: 1px solid transparent; 
+} 
+.taskList {
+  background: #FEFEFE;
+  margin: 0 auto;
+  margin-top: 58px;
+  width: 241px;
+  height: 282px;
+  border-radius: 5px; 
+  box-shadow: 1px 1px 20px gray;
+}
+.date {
+  width: 200px;
+  height: 90px;
+  margin: 0 auto;
+  border-bottom: 1px solid lightgray;
+  text-align: center;
+}
+.day {
+  font-size: 21px;
+  display: inline-block;
+  margin-top: 23px;
+  font-weight: 700;
+}
+.monthYear {
+  font-size: 12px;
+  line-height: 22px;
+}
+.task {
+  height: 38px;
+  font-size: 13.4px;
+  position: relative;
+}
+.tasks {
+  padding: 26px 30px 0 30px;
+}
+.chbox {
+  width: 17px;
+  height: 17px;
+  right: -4px;
+  top: -3px;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+}
+.chbox + label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid black;
+  border-radius: 50%;
+  transition: border-color .5s, opacity .5s, transform .5s;
+}
+svg {
+  position: absolute;
+  right: 0;
+}
+ polyline {
+  fill: none;
+  stroke: black;
+  stroke-width: 1.5;
+  stroke-dasharray: 30 30;
+  stroke-dashoffset: 30;
+  transition: stroke-dashoffset .5s;
+}
+.chbox:checked + label {
+  color: lightgray;
+} 
+.chbox:checked + label:before {
+  transform: scale(1.5);
+  border-color: lightgray;
+  opacity: 0;
+} 
+.chbox:checked ~ svg polyline {
+  stroke-dashoffset: 0;
+  stroke: lightgray;
+}
