@@ -17,7 +17,6 @@ ul {
 }
 .container {
 	width: 960px;
-	box-sizing: border-box;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin: 0 auto;
@@ -26,16 +25,17 @@ ul {
 
 .header {
 	background: #fcdb00;
-	height: 140px;
-	padding-top: 60px;
-	padding-left: 19px;
 }
-.header_size {
-	height: 140px;
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 58px;
+	padding-left: 19px;
+	padding-right: 0;
 }
 .logo {
-	float: left;
-	margin-left: 364px; 
+	margin-left: 112px;
 }
 .logo__img {
 }
@@ -49,11 +49,13 @@ ul {
 .menu_pos {
 	position: absolute;
 	top: 130px;
-	left: -600px;
-	transition: transform .5s;
+	left: -200px;
+	opacity: 0;
+	transition: transform .5s,opacity .5s;
 }
 .active {
-	transform: translateX(745px);
+	transform: translateX(345px);
+	opacity: 1;
 }
 .menu__elem {
 	color: #000;
@@ -61,18 +63,14 @@ ul {
 	margin-left: 67px;
 }
 .share_header {
-	position: relative;
-	float: right;
-	margin-right: 10px;
+	margin-right: 0;
 }
 .share__icon_header {
-	float: right;
-	margin-left: 21.5px;
-	margin-top: 15px;
+	margin-top: 13px;
+	margin-right: 17px; 
 }
 .header__menu-icon {
-	float: left;
-	margin-top: 17px;
+	margin-left: 15px;
 	cursor: pointer;
 }
 /*header end*/
@@ -83,19 +81,16 @@ ul {
 	position: relative;
 	display: flex;
 	flex-direction: row;
+	padding-bottom: 220px;
 }
 .slider__container {
 	overflow: hidden;
 }
 .slider__wrap {
 	width: 2880px;
+	display: flex;
 }
-.slider_size {
-	height: 600px;
-}
-.slider_pos {
-	position: relative;
-}
+
 .slider__ipad-mini {
 	width: 288px;
 	height: 381px;
@@ -133,15 +128,13 @@ ul {
 .slider__slide {
 	width: 960px;
 	position: relative;
-	height: 600px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	float: left;
 	transition: transform .5s;
 }
 .slider__title {
-	margin-top: 106px;
+	margin-top: 196px;
 	font-weight: bold;
 	font-size: 48px;
 }
@@ -197,7 +190,7 @@ input[type="radio"] {
 	border-radius: 50%;
 	cursor: pointer;
 	z-index: 1;
-	bottom: 108px;
+	bottom: 55px;
 }
 #dot1 + label {
 	left: 645px;
@@ -225,7 +218,7 @@ input[type="radio"] {
 /*features*/
 
 .features {
-	position: relative;
+
 }
 .wrap {
 	display: flex;
@@ -239,7 +232,6 @@ input[type="radio"] {
 	width: 288px;
 	height: 381px;
 	background: #fff;
-	position: relative;
 	border-top: 44px solid #000;
 	border-bottom: 44px solid #000;
 	border-left: 14px solid #000;
@@ -277,123 +269,92 @@ input[type="radio"] {
 	font-weight: bold;
 	vertical-align: top;
 }
-.features_size {
-	height: 835px;
+.features__container {
+	padding: 0;
+}
+.features {
+	background: #fff;
+	position: relative;
+	padding-bottom: 160px;
+}
+.wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 }
 .features__description {
-	height: 269px;
 	min-width: 960px;
-	margin-top: -60px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: 57px;
+	padding-top: 125px;
 }
 .features__title {
-	position: absolute;
-	top: 110px;
-	left: 364px;
 	font-size: 32px;
+	line-height: 0px;
 }
 .features__text {
-	position: absolute;
-	top: 160px;
-	left: 107px;
 	width: 750px;
+	margin-top: 30px;
 	font-size: 20px;
 	text-align: center;
+	line-height: 25px;
+	display: block;
 }
 .features__feature {
-	width: 33%;
-	margin-top: 15px;
-	position: relative;
-	height: 200px;
+	width: 30%;
+	padding-top: 60px;
 }
 .feature__title {
-	position: absolute;
-	top: 45px;
-	left: 15px;
 	font-size: 21.5px;
+	margin-left: 0px;
+}
+.features__feature_three,.features__feature_six {
+	padding-left: 60px;
+	box-sizing: border-box;
 }
 .feature__title_three {
-	left: 88px;
-}
-.feature__title_four {
-	top: 27px;
-	left: 10px;
-}
-.feature__title_six {
-	left: 88px;
-	top: 28px;
+	margin-left: 0px;
 }
 .feature__description {
-	position: absolute;
-	top: 83px;
-	left: 10px;
-	font-size: 16px;
-	width: 240px;
+	width: 84%;
+	margin-top: 10px;
 }
-.feature__description_three {
-	left: 86px;
-	top: 82px;
-}
-.feature__description_four {
-	top: 65px;
-	left: 10px;
-}
-.feature__description_six {
-	left: 85px;
-	top: 63px;
-}
-.features__icon {
-	position: absolute;
-	top: 50px;
-	left: 12px;
-}
-.features__icon_three {
-	left: 18px;
-}
-.features__icon_four {
-	left: 3px;
-}
-.features__icon_six {
-	left: 23px;
-	top: 45px;
-}
-
 /*features end*/
 /*subscribe*/
-.bg__wrap {
-	background: #000;
-}
 .subscribe {
-	height: 460px;
-	position: relative;
+	background: #000;
+	padding-bottom: 65px;
+}
+.subscribe__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0;
 }
 .subscribe__title {
-	position: absolute;
-	top: 85px;
-	left: 332px;
 	font-size: 32px;
 	font-weight: 700;
 	color: #fcdb00;
+	margin-top: 85px;
 }
 .subscribe__text {
-	position: absolute;
-	top: 135px;
-	left: 104px;
 	width: 750px;
 	font-size: 20px;
 	text-align: center;
 	color: #fff;
+	margin-top: 10px;
 }
 .form {
-	position: absolute;
-	bottom: 182px;
-	left: 112px;
+	margin-top: 35px;
 }
 .form__e-mail {
-	width: 560px;
+	width: 555px;
 	height: 50px;
 	border-radius: 5px;
 	font-size: 17px;
-	padding-left: 20px;
+	padding-left: 25px;
 	border: 0;
 	outline: none;
 }
@@ -408,46 +369,49 @@ input[type="radio"] {
 	background: #fcdb00; 
 }
 .share {
-	position: absolute;
-	bottom: 70px;
-	left: 332px;
+	margin-top: 78px;
+	display: flex;
 }
-.share__icon {
-	float: left;
-	margin-right: 32px;
+.share__elem {
+	padding: 0;
+	margin-right: 33px;
 }
 
 /*subscribe end*/
 /*footer*/
+.footer__container {
+	display: flex;
 
+}
 .footer {
 	background: #000;
-	height: 320px;
 	position: relative;
 	color: #fff;
+	padding: 63px;
 }
 .footer__contacts {
-	position: absolute;
-	left: 21px;
-	top: 60px;
-	font-size: 16px;
-	width: 200px;
+	margin-left: 10px;
+} 
+.footer__adress {
+	width: 170px;
 }
 .contacts__e-mail {
 	line-height: 28px;
 }
 .footer__nav {
-	float: right;
-	margin-left: 42px;
+	margin-left: 82px;
 }
 .footer__link a{
 	color: #fff;
 }
 .footer__nav_two {
-	margin-left: 70px;
+	margin-left: 56px;
 }
 .footer__nav_three {
-	margin-left: 54px;
+	margin-left: 74px;
+}
+.footer__nav_four {
+	margin-left: 38px;
 }
 .footer__links {
 	float: right;

@@ -32,11 +32,6 @@ gulp.task('build-css', function(){
         .pipe(notify('successfully compiled'));
 });
 
-gulp.task('build-cssFonts', function(){
-  return gulp.src(paths.src.cssFonts)
-        .pipe(gulp.dest(paths.build.css));
-});
-
 gulp.task('build-html', function(){
   return gulp.src(paths.src.html)
         .pipe(gulp.dest('build'));
@@ -71,7 +66,6 @@ gulp.task('build', [
     'build-script',
     'build-img',
     'build-font',
-    'build-cssFonts'
 ]);
 
 gulp.task('default', ['build']);
