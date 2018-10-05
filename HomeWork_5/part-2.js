@@ -48,6 +48,9 @@ function slice(array, from = 0, to = array.length) {
 	if(to < 0){
 		to = array.length - (to*(-1));
 	}
+	if(to > array.length){
+		to = array.length;
+	}
 	for(i = from; i < to; i++){ 
 		result.push(array[i]); 
 	} 
