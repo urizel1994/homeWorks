@@ -1,4 +1,4 @@
-// задание 1
+﻿// задание 1
 function isAllTrue(array, fn) {
 	if(!Array.isArray(array)||array.length === 0){
 		throw new Error("empty array");
@@ -7,17 +7,16 @@ function isAllTrue(array, fn) {
 		throw new Error("fn is not a function");
 	}
 	else {
-		var count = 0;
-		for(i = 0; i < array.length; i++){
-			if(fn(array[i]) === true){
-				count++;
-			}
+		var result;
+		for(var i = 0; i < array.length; i++){
+			if(fn(array[i]) === false){
+				result = false;
+				break;
+			} else{
+				result = true;	
+			}	
 		}
-		if(count === array.length){
-			return true;
-		} else {
-			return false;
-		}
+		return result;
 	}	
 }
 
@@ -30,17 +29,16 @@ function isSomeTrue(array, fn) {
 	else if(typeof(fn) !== "function"){
 		throw new Error("fn is not a function");
 	} else {
-		var count = 0;
-		for(i = 0; i < array.length; i++){
+		var result;
+		for(var i = 0; i < array.length; i++){
 			if(fn(array[i]) === true){
-				count++;
-			}
+				result = true;
+				break;
+			} else{
+				result = false;	
+			}	
 		}
-		if(count > 0){
-			return true;
-		} else {
-			return false;
-		}
+		return result;
 	}	
 }
 
@@ -51,7 +49,7 @@ function returnBadArguments(fn,...args) {
 		throw new Error("fn is not a function");
 	} else {
 		var badArgs = [];
-		for(i = 0; i < args.length; i++){
+		for(var i = 0; i < args.length; i++){
 			try {
 				fn(args[i]);
 			}
@@ -67,32 +65,32 @@ function returnBadArguments(fn,...args) {
 // задание 4
 
 //проверка на число
-function isNumeric(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
+function isNumber(n) {
+  return (n instanceof Number||typeof n === 'number') && !isNaN(n);
 }
 
 function calculator(number = 0) {
-	if(!isNumeric(number)){
+	if(!isNumber(number)){
 		throw new Error("number is not a number");
 	} else {
 		return {
 			sum: function(...args){
 				let result = number;
-				for(i = 0; i < args.length; i++){
+				for(var i = 0; i < args.length; i++){
 					result += args[i];
 				}
 				return result;
 			},
 			dif: function(...args){
 				let result = number;
-				for(i = 0; i < args.length; i++){
+				for(var i = 0; i < args.length; i++){
 					result -= args[i];
 				}
 				return result;
 			},
 			div: function(...args){
 				let result = number;
-				for(i = 0; i < args.length; i++){
+				for(var i = 0; i < args.length; i++){
 					if(args[i] === 0){
 						throw new Error("division by 0");
 					} else{
@@ -103,7 +101,7 @@ function calculator(number = 0) {
 			},
 			mul: function(...args){
 				let result = number;
-				for(i = 0; i < args.length; i++){
+				for(var i = 0; i < args.length; i++){
 					result *= args[i];
 				}
 				return result;
@@ -112,3 +110,4 @@ function calculator(number = 0) {
 	}	
 }
 
+alert(calculator("3").sum(2,3));
