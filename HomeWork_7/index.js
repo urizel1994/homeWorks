@@ -38,11 +38,9 @@ function delegate(target, fn) {
 // задание 6
 
 function once(target, fn) {
-
-
 	var eventHasRun = false;
 	target.addEventListener("click",function(event){
-		if(a === false){
+		if(eventHasRun === false){
 			fn();
 			eventHasRun = true;
 		} 
