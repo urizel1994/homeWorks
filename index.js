@@ -1,4 +1,4 @@
-//задание 6 
+//Р·Р°РґР°РЅРёРµ 6 
 
 function deleteTextNodesRecursive(where) {
 	var childs = Array.from(where.childNodes);
@@ -8,10 +8,10 @@ function deleteTextNodesRecursive(where) {
 		} else{
 			deleteTextNodesRecursive(childs[i]);
 		}
-  	}
+	}
 };
 
-//задание 7 
+//Р·Р°РґР°РЅРёРµ 7 
 
 function collectDOMStat(root) {
 	var stat = {};
@@ -27,8 +27,7 @@ function collectDOMStat(root) {
 			var tag = childs[i].tagName;
 			var cls = childs[i].classList;
 			if(!(tag in stat.tags)){
-				stat.tags[tag] = 1;
-				
+				stat.tags[tag] = 1;	
 			}
 			else if(tag in stat.tags){
 				stat.tags[tag]++;
