@@ -99,8 +99,8 @@ function observeChildNodes(where,fn) {
 	var nodeInfo = {};
 	var observer = new MutationObserver(function(mutations) {
  		mutations.forEach(function(mutation) {
-    		console.log(mutation.type);
-    		if(mutation.addedNodes.length){
+    			console.log(mutation.type);
+    			if(mutation.addedNodes.length){
    				nodeInfo['type'] = 'insert';
    				nodeInfo['nodes'] = Array.from(mutation.addedNodes);
    			}	
