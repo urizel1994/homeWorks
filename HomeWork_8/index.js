@@ -8,7 +8,7 @@ function createDivWithText(text) {
 
 //задание 2
 
-var prepend = (what, where) => where.appendChild(what);
+var prepend = (what, where) => where.insertBefore(what, where.children[1]);
 
 //задание 3
 
