@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ЖК от винта</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto" rel="stylesheet">
+</head>
+<body>
+	<svg class="house" width="480" height="800">
+	  	<defs>
+		    <linearGradient id="Gradient1" x1="0" y1="0" x2="0" y2="100%">
+		      <stop offset="0%" stop-color="#FCDE56" />
+		      <stop offset="100%" stop-color="#FFD30B" />
+		    </linearGradient>
+		    <linearGradient id="Gradient2" x1="0" y1="0" x2="0" y2="100%">
+		      <stop offset="0%" stop-color="#FFD30B" />
+		      <stop offset="100%" stop-color="#FCDE56" />
+		    </linearGradient>
+		    <linearGradient id="Gradient3" x1="0" y1="0" x2="0" y2="100%">
+		      <stop offset="0%" stop-color="#FCDE56" />
+		      <stop offset="100%" stop-color="#FFDD41" />
+		    </linearGradient>
+	  	</defs>
+	 	<g class="roof">
+	 		<rect fill="#4D2D19" width="434" height="32" x="13"/>
+	 		<rect fill="#613007" width="416" height="13" x="22" y="32"/>
+	 	</g> 
+	 	<g class="floor">
+	 		<rect fill="#613007" width="460" height="34" y="122"/>
+	 		<rect fill="#994404" width="426" height="57" x="17" y="65"/>
+	 		<rect fill="url(#Gradient1)" width="410" height="133" x="25" y="45"/>
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="47" y="67" />
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="181" y="67" />
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="315" y="67" />
+	 		<rect fill="#fff" fill-opacity="0.5" width="410" height="2" x="25" y="176" />
+	 	</g>
+	 	<g class="floor">
+	 		<rect fill="#613007" width="460" height="34" y="255"/>
+	 		<rect fill="#994404" width="426" height="57" x="17" y="198"/>
+	 		<rect fill="url(#Gradient2)" width="410" height="131" x="25" y="178"/>
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="47" y="200" />
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="181" y="200" />
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="315" y="200" />
+	 	</g>
+	 	<g class="floor">
+	 		<rect fill="url(#Gradient3)" width="446" height="143" x="7" y="304"/>
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="47" y="331" />
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="181" y="331" />
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="315" y="331" />
+	 	</g>
+	 	<g class="floor">
+	 		<rect fill="#613007" width="460" height="34" y="516"/>
+	 		<rect fill="#994404" width="426" height="57" x="17" y="459"/>
+	 		<rect fill="url(#Gradient2)" width="410" height="132" x="25" y="447"/>
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="47" y="461" />
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="181" y="461" />
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="315" y="461" />
+	 		<rect fill="#fff" fill-opacity="0.5" width="410" height="2" x="25" y="567" />
+	 	</g>
+	 	<g class="floor">
+	 		<rect fill="#613007" width="460" height="34" y="648"/>
+	 		<rect fill="#994404" width="426" height="57" x="17" y="591"/>
+	 		<rect fill="url(#Gradient1)" width="410" height="131" x="25" y="573"/>
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="47" y="595" />
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="181" y="595" />
+	 		<rect fill="#994404" width="97" height="87" rx="5" ry="5" x="315" y="595" />
+	 	</g>
+	 	<g class="foundation">
+	 		<rect fill="#4D2D19" width="410" height="68" x="25" y="707"/>
+	 		<line x1="25" y1="718" x2="435" y2="718" stroke="#613007" stroke-width="12" stroke-dasharray="30.5 4"/> 
+	 		<line x1="25" y1="734" x2="39" y2="734" stroke="#613007" stroke-width="12"/> 
+	 		<line x1="43" y1="734" x2="435" y2="734" stroke="#613007" stroke-width="12" stroke-dasharray="30.5 4"/> 
+	 		<line x1="25" y1="750" x2="435" y2="750" stroke="#613007" stroke-width="12" stroke-dasharray="30.5 4"/> 
+	 		<line x1="25" y1="766" x2="39" y2="766" stroke="#613007" stroke-width="12"/> 
+	 		<line x1="43" y1="766" x2="435" y2="766" stroke="#613007" stroke-width="12" stroke-dasharray="30.5 4"/> 
+	 	</g>
+	</svg>
+	<div class="functional">
+		<h1 class="functional__title">ЖК от Винта</h1>
+		<div class="functional__form-select">
+			<a href="">Добавить жителя</a>
+			<a href="">Фильтр</a>
+		</div>
+		<form action="" class="add-form">
+			<h2 class="add-form__title">Добавить жителя</h2>
+			<label>Имя<input type="text" class="add-form__name"></label>
+			<label>Пол</label>
+			<label class="gender">
+	 			<input type="radio" name="status">
+	  			Мужской
+			</label>
+			<label class="gender">
+	  			<input type="radio" name="status">
+	  			Женский
+	  		</label>	
+			<label>Этаж<input type="text" class="add-form__floor"></label>
+			<label>Кол-во комнат</label>
+			<select>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+			<label>
+				Дополнительно
+				<input type="checkbox">Домашние животные
+				<input type="checkbox">ТВ
+				<input type="checkbox">Интернет
+			</label>
+			<label>Сколько человек проживает</label>
+			<select>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+			<button>Сбросить</button>
+			<button>Добавить</button>
+		</form>
+	</div>	
+</body>
+</html>
