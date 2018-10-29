@@ -30,9 +30,9 @@ const name = formAdd.elements.name;
 const formFloor = formAdd.elements.floor;
 const rooms = formAdd.elements.rooms;
 const numOfPeople = formAdd.elements["num-of-people"];
-const pets = formAdd.elements.pets;
-const tv = formAdd.elements.tv;
-const net = formAdd.elements.net;
+var pets = formAdd.elements.pets;
+var tv = formAdd.elements.tv;
+var net = formAdd.elements.net;
 const genderSwitch = document.querySelector(".add-form__gender-switch");
 const m = document.querySelector(".m");
 const w = document.querySelector(".w");
@@ -76,6 +76,7 @@ filterSwitch.addEventListener("click", function(){
 });
 
 //ПЕРЕКЛЮЧЕНИЕ ВРЕМЕНИ СУТОК
+
 day.addEventListener("click", function(){
 	dayNightSwitch.style.transform = "translateX(-83px)";
 	night.style.opacity = "1";
@@ -206,7 +207,7 @@ if(JSON.parse(localStorage.getItem("house")) === null){
 } 
 var base;
 var rests = Array.from(residents);
-console.log(add);
+
 var restsD = [[],[],[],[],[]];
 var c = 0;
 var d = 1;
@@ -262,7 +263,6 @@ addBtn.addEventListener("click",function(){
 	if(net.checked) {
 		apr.net = true;
 	}
-	console.log(apr);
 	if(base[apr.floor - 1].length < 3){
 		base[apr.floor - 1].push(apr);
 	}
@@ -271,19 +271,29 @@ addBtn.addEventListener("click",function(){
 			restsRever[i][j].style.fill = base[i][j].bg; 
 		}
 	}
-	console.log(base);
 	add = true;
 	localStorage.setItem("house", JSON.stringify(base));
 });
 
 //сброс
+
+/*
 resetBtn.addEventListener("click", function(){
 	localStorage.clear();
 	base = [[],[],[],[],[]];
 	localStorage.setItem("house", JSON.stringify(base));
 });
-console.log(base);
-
+*/
+resetBtn.addEventListener("click", function(){
+	gender = "";
+	name.value = null;
+	formFloor.value = null;
+	rooms.value = 0;
+	numOfPeople.value = 0;
+	pets.checked = false;
+	tv.checked = false;
+	net.checked = false;
+});
 //фильтрация
 function filter(){
 	for(var i = 0; i < base.length;i++){
@@ -394,6 +404,9 @@ filterPets.addEventListener("change", filter);
 filterTv.addEventListener("change", filter);
 filterNet.addEventListener("change", filter);
 filterFormFloor.addEventListener("input",filter);
+
+//сброс фильтра
+
 filterReset.addEventListener("click",function(){
 	for(var i = 0; i < base.length;i++){
 		for(var j = 0; j < base[i].length;j++){
