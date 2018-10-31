@@ -9,6 +9,7 @@ body {
 	--gradient-one: url(#Gradient1);
 	--gradient-two: url(#Gradient2);
 	--gradient-three: url(#Gradient3);
+	--floor-active: url(#Gradient-active-day);
 }
 .night-mode {
 	--color-one: #3E3FC4;
@@ -18,6 +19,7 @@ body {
 	--gradient-one: url(#Gradient-night1);
 	--gradient-two: url(#Gradient-night2);
 	--gradient-three: url(#Gradient-night3);
+	--floor-active: url(#Gradient-active-night);
 }
 .wrap {
 	display: flex;
@@ -442,4 +444,10 @@ input:invalid {
 }
 .girl {
 	fill: url(#girl);
+}
+.floor-active {
+	fill: var(--floor-active);
+}
+.rest-deactive {
+	opacity: 0.5;
 }

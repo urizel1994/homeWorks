@@ -19,7 +19,7 @@ const roof = document.querySelector(".house__roof");
 const floorWrap = document.querySelectorAll(".house__floor-wrap");
 const balconOne = document.querySelectorAll(".house__balc-1");
 const balcontwo = document.querySelectorAll(".house__balc-2");
-const floors = Array.from(document.querySelectorAll(".house__floor")).reverse();
+const houseFloors = Array.from(document.querySelectorAll(".house__floor")).reverse();
 const foundation = document.querySelector(".house__foundation");
 const residents = document.querySelectorAll(".house__resident");
 
@@ -109,7 +109,18 @@ night.addEventListener("click", function(){
 
 house.addEventListener("click", function(event){
 	if(event.target.classList.contains("house__floor")){
+		for(var i = 0; i < residents.length; i++){
+			if(residents[i].classList.contains("rest-deactive")){
+				residents[i].classList.remove("rest-deactive");
+			}	
+		}
 		var floors = Array.from(house.children).reverse();
+		for(var i = 0; i < houseFloors.length; i++){
+			houseFloors[i].classList.remove("floor-active");
+		}
+		if(!event.target.classList.contains("floor-active")){
+			event.target.classList.add("floor-active");
+		}
 		var floorEl = event.target.parentElement;
 		formAdd.elements.floor.value = (floors.indexOf(floorEl));
 	}
@@ -121,6 +132,13 @@ house.addEventListener("click", function(event){
 			functional.classList.add("display-none");
 		}
 		info.classList.add("display-flex");
+		for(var i = 0; i < residents.length; i++){
+			residents[i].classList.add("rest-deactive");
+		}
+		event.target.classList.remove("rest-deactive");
+		for(var i = 0; i < houseFloors.length; i++){
+			houseFloors[i].classList.remove("floor-active");
+		}
 		for(var i = 0; i < restsRever.length; i++){
 			if(restsRever[i].indexOf(event.target) != -1){
 				infoName.innerHTML = (base[i][restsRever[i].indexOf(event.target)].name);
