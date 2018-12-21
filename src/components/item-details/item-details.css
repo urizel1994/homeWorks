@@ -1,0 +1,26 @@
+.item-details {
+    background:rgb(50, 50, 114);
+    margin-left: 20px;
+    color: lightcyan;
+    font-size: 25px;
+    display: flex;
+    width: 50vw;
+    padding: 20px;
+    border: 1px solid black;
+    align-items: flex-start;
+}
+.item-name {
+    margin-left: 20px;
+}
+.item-list-group {
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+}
+.item-image {
+    width: 250px;
+    height: 300px;
+    background: black;
+    border-radius: 20px;
+    border: 1px solid black;
+}
