@@ -1,0 +1,16 @@
+.menu {
+    height: 100px;
+}
+.menu__item {
+    text-align: center;
+}
+.menu__item a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.719);
+    padding-bottom: 7px;
+}
+.menu__item a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    color: rgba(255, 255, 255, 0.486);
+}
