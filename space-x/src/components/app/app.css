@@ -1,0 +1,10 @@
+body {
+    background: url("../../bg.jpg");
+    background-position: 50% 0;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+div {
+    box-sizing: border-box;
+}
+
