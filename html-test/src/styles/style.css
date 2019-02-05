@@ -1,0 +1,635 @@
+@import url(reset.css);
+@import url("../fonts/raleway-bold.ttf");
+@import url("../fonts/raleway-regular.ttf");
+@import url("../fonts/roboto-slab-regular.ttf");
+
+.tablet {
+	display: none;
+}
+.mobile {
+	display: none;
+}
+.dev {
+	display: block;
+}
+.header {
+	background: url("../images/sochi.jpg");
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #0d3351;
+}
+.container {
+	width: 1170px;
+	padding: 0 15px;
+}
+
+/* //////////////////////////////////////////header begin */
+
+.header__block1 {
+	display: flex;
+	justify-content: space-between;
+	height: 65px;
+	align-items: flex-end;
+	font-family: "raleway";
+	font-size: 15px;
+}
+.header__support {
+	display: flex;
+	flex-direction: column;
+}
+.header__menu {
+	display: flex;
+	width: 44%;
+	justify-content: space-between;
+	align-items: center;
+	font-family: "raleway";
+	font-size: 15px;
+}
+.header__sign-in {
+	position: relative;
+}
+
+.header__sign-in::before {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 12px;
+	left: -16px;
+	top: 2px;
+	background: url("../images/user.svg");
+}
+
+.header__currency {
+	position: relative;
+}
+
+.header__currency::before {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 12px;
+	left: -16px;
+	top: 2px;
+	background: url("../images/Р.svg");
+}
+.header__currency:after,.header__sign-in::after,.header__lang::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 6px;
+	right: -12px;
+	border: 5px solid transparent; 
+	border-top-color: #003366; 
+}
+.header__lang {
+	position: relative;
+}
+.header__tel {
+	font-family: "raleway";
+	font-weight: 700;
+	font-size: 16.2px;
+	color: #0d3351;
+}
+
+.header__block2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 50px;
+	padding-bottom: 196px;
+}
+
+.header__title {
+	font-family: "roboto slab";
+	font-size: 96.5px;
+	margin-top: 35px;
+}
+.subtitle {
+	font-family: "roboto slab";
+	font-size: 39px;
+	margin-top: 10px;
+	color: #0d3351;
+}
+
+.header__button {
+	width: 202px;
+	height: 46px;
+	font-family: "raleway";
+	font-size: 15px;
+	color: #fff;
+	background: #33c7fd;
+	border: 0;
+	outline: none;
+	margin-top: 58px;
+}
+
+/* //////////////////////////////////////////header end */
+/* //////////////////////////////////////////main begin */
+.main {
+	background: #f3f3f3;
+}
+
+.line-container {
+	position: relative;
+}
+
+.b-cruises {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 63px;
+	padding-bottom: 65px;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.b-cruises__sort {
+	line-height: 42px;
+	color: #0d3351;
+	font-size: 15px;
+	position: relative;
+	font-family: "raleway";
+}
+.b-cruises__sort span {
+	font-style: italic;
+	font-family: "raleway";
+}
+.b-cruises__sort:after {
+	content: "";
+	display: block;
+	position: absolute;
+	right: -21px;
+	top: 19px;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent; 
+	border-top-color: #0d3351; 
+}
+
+
+
+
+.b-cruises__cruises {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 1075px;
+	justify-content: space-between;
+	margin-top: 45px;
+	align-items: center;
+}
+
+.description{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 30px 40px;
+	height: 195px;
+	box-sizing: border-box;
+}
+.cruises {
+	margin-top: 27px;
+	display: flex;
+}
+.cruise {
+	text-align: left;
+	background: #ffffff;
+	position: relative;
+}
+
+.cruiseImg {
+	width: 100%;
+}
+.title {
+	color: #00a2dd;
+	font-family: "roboto slab";
+	font-size: 19.5px;
+	position: relative;
+	display: inline;
+}
+.title::before {
+	content: "";
+	display: block;
+	top: 5px;
+	right: -5px;
+	width: 0;
+	height: 0;
+	border: 4px solid transparent; 
+	border-left-color: #00a2dd; 
+	position: absolute;
+}
+.route,.duration {
+	color: #003366;
+	font-family: "raleway";
+	font-size: 15.3px;
+}
+.route span,.duration span {
+	font-weight: bold;
+}
+
+.price {
+	color: #0d3351;
+	font-family: "roboto slab";
+	font-size: 33px;
+}
+.oldPrice {
+	color: #999999;
+	font-size: "roboto slab";
+	font-size: 20px;
+	margin-left: 28px;
+	text-decoration: line-through;
+}
+
+.flag {
+	color: #fff;
+	display: block;
+	width: 50px;
+	height: 100px;
+	border-left: 44px solid #33ccff; 
+	border-right: 44px solid #33ccff; 
+	border-bottom: 20px solid transparent; 
+	box-sizing: border-box;
+	right: 20px; 
+	top: -5px;
+	position: absolute;
+}
+.flag span {
+	font-size: 15px;
+	position: absolute;
+	left: -32px;
+	top: 30px;
+	text-align: center;
+	font-family: "raleway";
+}
+.b-cruises__cruises {
+	padding-left: 0;
+	padding-right: 0;
+}
+.b-cruises__sochi .flag {
+	border-left: 44px solid #ff0033; 
+	border-right: 44px solid #ff0033; 
+}
+
+.b-cruises__gelengik .flag {
+	border-left: 44px solid #f20542; 
+	border-right: 44px solid #f20542; 
+}
+.b-cruises .header__button {
+	margin-top: 30px;
+}
+
+/* //////////////////////////////////////////main end */
+/* //////////////////////////////////////////footer begin */
+
+.footer {
+	display: flex;
+	justify-content: center;
+	height: 130px;
+	padding-top: 30px;
+	box-sizing: border-box;
+	color: #0d3351;
+	padding-bottom: 40px;
+}
+.footer .container {
+	display: flex;
+	justify-content: space-between;
+}
+.footer__menu {
+	display: flex;
+	flex-direction: column;
+}
+.footer a {
+	color: #003366;
+	font-family: "raleway"; 
+	font-size: 15.2px;
+}
+.footer__share {
+	display: flex;
+	flex-direction: column;
+	color: #003366;
+	font-family: "raleway";
+	width: 150px;
+	font-size: 15.2px;
+	margin-right: 130px;
+}	
+.footer__share div{
+	display: flex;
+	justify-content: space-between;
+}
+.footer .tel {
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.social {
+	background: #0d3351;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.social a {
+	margin: 0 auto;
+}
+
+.line {
+	height: 30vw;
+	width: 20vw;
+	top: 0vh;
+	left: -8vw;
+	stroke: #003366; 
+	stroke-width: 3; 
+	fill: none;
+	stroke-dasharray: 10 5;
+	position: absolute;
+	z-index: 1;
+}
+
+/* //////////////////////////////////////////footer end */
+/* //////////////////////////////////////////menu begin */
+.menu {
+	position: absolute;
+	width: 420px;
+	height: auto;
+	z-index: 999;
+	top: 70px;
+	left: 89px;
+	background: #003366;
+	padding-left: 45px;
+	padding-top: 55px;
+	box-sizing: border-box;
+	display: none;
+}
+.menuElem {
+	display: block;
+}
+.menuElem a{
+	color: #fff;
+	font-family: "roboto slab";
+	font-size: 19px;
+	margin-top: 5px;
+	line-height: 49px;
+}
+
+/* //////////////////////////////////////////menu end */
+/* //////////////////////////////////////////popup begin */
+
+.mask {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	height: 100vh;
+	width: 100vw; 
+	display: none;
+}
+.popup {
+	position: fixed;
+	width: 852px;
+	height: 692px;
+	padding-left: 49px;
+	padding-top: 118px;
+	box-sizing: border-box;
+	background: #fff;
+	top: 0;
+	display: none;
+	z-index: 15;
+	flex-direction: row;
+}
+.images {
+	flex-direction: column;
+}
+.images div {
+	display: flex;
+}
+.mainImg {
+	width: 343px;
+	height: 240px;
+}
+.minImg {
+	width: 64px;
+	height: 55px;
+	margin-top: 8px;
+	margin-left: 9px;
+	background-size: 50%;
+}
+.text {
+	text-align: left;
+	font-family: "raleway";
+	font-size: 15.3px;
+	padding-left: 20px;
+	padding-right: 40px;
+}
+.text p {
+	font-family: "raleway";
+	font-size: 15.3px;
+	line-height: 24.2px;
+	margin-top: -10px;
+}
+.titlePopup {
+	color: #00a2dd;
+	font-family: "roboto slab";
+	font-size: 19.5px;
+	position: relative;
+}
+.routePopup {
+	line-height: 0px;
+	color: #003366;
+	font-family: "raleway";
+	font-size: 15.3px;
+	margin-top: 44px;
+	display: block;
+}
+.durationPopup {
+	line-height: 0px;
+	color: #003366;
+	font-family: "raleway";
+	font-size: 15.3px;
+}
+.pricePopup {
+	line-height: 48px;
+	color: #0d3351;
+	font-family: "roboto slab";
+	font-size: 32px;
+}
+.popupButton {
+	width: 202px;
+	height: 46px;
+	font-family: "raleway";
+	font-size: 15px;
+	color: #fff;
+	margin-top: 9px;
+	background: #33ccff;
+	border: 0;
+}
+.timetable {
+	color: #003366;
+	font-family: "raleway";
+	font-size: 15.3px;
+	line-height: 46px;
+}
+/* //////////////////////////////////////////popup end */
+
+
+
+@media(max-width: 1200px){
+	.container {
+		width: 98vw;
+	}
+	.header__menu {
+		width: 50%;
+	}
+	.header__title {
+		font-size: 90px;
+	}
+	.cruise {
+		width: 48%;
+	}
+}
+@media(max-width: 1024px){
+	.container {
+		width: 750px;
+	}
+	.header__menu {
+		width: 80%;
+	}
+	.header__title {
+		font-size: 60px;
+	}
+	.dev {
+		display: none;
+	}
+	.tablet {
+		display: block;
+	}
+	.cruise {
+		width: 45%;
+		margin-top: 20px;
+	}
+	.description {
+		padding-left: 33px;
+		padding-right: 20px;
+		height: 138px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.b-cruises__cruises {
+		height: 850px;
+		justify-content: flex-start;
+	}
+	.price {
+		font-size: 30px;
+	}
+	.route {
+		font-size: 15px;
+	}
+	.b-cruises__sochi {
+		padding-bottom: 0px;
+	}
+	.b-cruises__gelengik {
+		padding-bottom: 0px;
+	}
+	.title {
+		font-size: 14px;
+	}
+	.route,.duration {
+		font-size: 12px;
+	}
+	.price {
+		font-size: 26px;
+	}
+	.oldPrice {
+		font-size: 15px;
+	}
+}
+
+@media(max-width: 780px){
+	.container {
+		width: 98vw;
+	}
+	.b-cruises__cruises {
+		height: 450px;
+	}
+	.header__menu {
+		display: none;
+	}
+	.header__subtitle {
+		font-size: 30px;
+	}
+	.header__title {
+		font-size: 50px;
+	}
+	.b-cruises__cruises {
+		height: 850px;
+	}
+	
+}	
+
+@media(max-width: 400px){
+	.container {
+		width: 320px;
+	}
+	.b-cruises__cruises {
+		height: 2050px;
+	}
+	.cruise {
+		width: 98%;
+	}
+	.header__title {
+		font-size: 55px;
+		text-align: center;
+	}
+	.header__subtitle {
+		font-size: 25px;
+		text-align: center;
+	}
+	.b-cruises {
+		text-align: center;
+	}
+	.b-cruises__subtitle {
+		font-size: 20px;
+	}
+	.footer .container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.footer__menu {
+		display: none;
+	}
+	.footer__share {
+		margin-right: 0;
+	}
+	.footer {
+		height: 200px;
+		text-align: center;
+	}
+	.tel {
+		font-size: 15px;
+	}
+}	
+
+
+@keyframes showMenu {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: 415px;
+	}
+}
+@keyframes showLink {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

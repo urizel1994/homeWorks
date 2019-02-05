@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Круизы</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+</head>
+<body>
+	<header class="header">
+		<nav class="menu">
+			<ul>
+				<li class="menuElem"><a href="#">Популярные маршруты</a></li>
+				<li class="menuElem"><a href="#">Расписание рейсов</a></li>
+				<li class="menuElem"><a href="#">Забронированные рейсы</a></li>
+				<li class="menuElem"><a href="#">Вход для партнеров</a></li>
+				<li class="menuElem"><a href="#">О компании</a></li>
+				<li class="menuElem"><a href="#">Контакты</a></li>
+			</ul>
+		</nav>
+		<div class="header__block1 container">
+			<img src="images/меню.svg" alt="menu" class="header__menu-button">
+			<nav class="header__menu">
+				<span class="header__sign-in">Личный кабинет</span>
+				<span class="header__currency">Рубль</span>
+				<span class="header__lang">Ru</span>
+				<span class="header__support">
+					<span class="header__tel">8 800 500-61-05</span> 
+					Круглосуточная поддержка
+				</span>
+			</nav>
+		</div>
+		<div class="header__block2 container">
+			<img src="images/logo.png" class="header__logo">
+			<span class="header__subtitle subtitle">Морские прогулки</span>
+			<h1 class="header__title">ПО ЧЕРНОМУ МОРЮ</h1>
+			<button class="header__button button">Выбрать круиз</button>
+			<div class="line-container">
+				<svg class="line dev">
+					<path d="M74,21 C130,125 0,135 47,221 46,221 70,250 68,292"/>
+				</svg>
+				<svg class="line tablet">
+					<path d="M66,22 C120,130 0,145 28,220 27,230 55,240 55,350"/>
+				</svg>
+				<svg class="line mobile">
+					<path d="M74,21 C130,125 0,135 47,221 46,221 70,250 68,292"/>
+				</svg>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="mask"></div>
+		<section class="b-cruises container">
+			<div class="popup">
+				<div class="images">
+					<div class="mainImg"></div>
+					<div>
+						<div class="minImg"></div>
+						<div class="minImg"></div>
+						<div class="minImg"></div>
+						<div class="minImg"></div>
+					</div>
+				</div>
+				<div class="text">
+					<span class="titlePopup">Морская прогулка в Абрау-Дюрсо</span>
+					<span class="routePopup"><span class="bold">Маршрут:</span> Сочи - Абрау-Дюрсо</span><br>
+					<span class="durationPopup"><span class="bold">Продолжительность:</span> 11 ч. 0 мин.</span><br>
+					<span class="timetable bold">Расписание:</span>
+						<p>Отправление из Сочи: ежедневно в 10:00, 11:40, 13:20, 15:00, 16:40
+						Отправление из Абрау-Дюрсо: ежедневно
+						в 12:25, 14:05, 15:45, 17:25, 19:05	  
+						Продолжительность: 11 часов 0 мин., из которых 10 часов - морская прогулка (туда и обратно), от 1 часа 30 мин. - свободное время в Ласточкином гнезде
+						Причал отправления/прибытия: набережная Ленина, причал №8, теплоход "Азов"<p><br>
+					<span class="pricePopup">14 800 руб.</span><br>
+					<button class="popupButton">Бронирование</button>
+					</div>
+				</div>
+			<span class="b-cruises__subtitle subtitle">Каталог круизов</span>
+			<span class="b-cruises__sort">Сортировать круизы по <span>цене</span></span>
+			<div class="b-cruises__cruises container">
+				<div class="cruise b-cruises__anapa">
+					<img src="images/lighthouse.jpg" class="cruiseImg" alt="">
+					<div class="flag"><span>ХИТ ПРОДАЖ</span></div>
+					<div class="description">
+						<span class="title">Морской круиз в Анапу</span>
+						<span class="route"><span>Маршрут:</span> Сочи-Лазаревское-Геленджик-Анапа</span>
+						<span class="duration"><span>Продолжительность:</span> 10 ч. 0 мин.</span>
+						<span class="price">49 000 руб.</span>
+					</div>	
+				</div>
+				<div class="cruise b-cruises__gelengik tablet mobile">
+					<img src="images/gelen.jpg" class="cruiseImg" alt="">
+					<div class="flag"><span>CКИДКА 10%</span></div>
+					<div class="description">
+						<span class="title">Морская прогулка в Геленджик</span>
+						<span class="route"><span>Маршрут:</span> Сочи-Туапсе-Геленджик</span>
+						<span class="duration"><span>Продолжительность:</span> 12 ч. 30 мин.</span>
+						<div>
+							<span class="price">7 000 руб.</span>
+							<span class="oldPrice">10 000 руб.</span>
+						</div>
+					</div>
+				</div>
+				<div class="cruise b-cruises__sochi tablet mobile">
+					<img src="images/sochi-2461968_1920.jpg" class="cruiseImg" alt="">
+					<div class="flag"><span>АКЦИЯ</span></div>
+					<div class="description">
+						<span class="title">Обзорная морская прогулка с экскурсией</span>
+						<span class="route"><span>Маршрут:</span> Сочи-Адлер-Сочи<br>(без высадки)</span>
+						<span class="duration"><span>Продолжительность:</span> 1 ч. 0 мин.</span>
+						<div>
+							<span class="price">5 000 руб.</span>
+							<span class="oldPrice">15 000 руб.</span>
+						</div>
+					</div>	
+				</div>
+				<div class="cruise b-cruises__novorossiysk dev">
+					<img src="images/novorossiysk.jpg" class="cruiseImg" alt="">
+					<div class="description">
+						<span class="title">Морской круиз в Новороссийск</span>
+						<span class="route"><span>Маршрут:</span> Сочи-Геленджик-Новороссйиск-Геленджик-Сочи</span>
+						<span class="duration"><span>Продолжительность:</span> 13 ч. 0 мин.</span>
+						<span class="price">14 800 руб.</span>
+					</div>	
+				</div>
+				<div class="cruise b-cruises__sochi dev">
+					<img src="images/sochi_progulka.jpg" class="cruiseImg" alt="">
+					<div class="flag"><span>АКЦИЯ</span></div>
+					<div class="description">
+						<span class="title">Обзорная морская прогулка с экскурсией</span>
+						<span class="route"><span>Маршрут:</span> Сочи-Адлер-Сочи(без высадки)</span>
+						<span class="duration"><span>Продолжительность:</span> 1 ч. 0 мин.</span>
+						<div>
+							<span class="price">5 000 руб.</span>
+							<span class="oldPrice">15 000 руб.</span>
+						</div>
+					</div>	
+				</div>
+				<div class="cruise b-cruises__gelengik dev">
+					<img src="images/gelengik.jpg" class="cruiseImg" alt="">
+					<div class="flag"><span>CКИДКА 10%</span></div>
+					<div class="description">
+						<span class="title">Морская прогулка в Геленджик</span>
+						<span class="route"><span>Маршрут:</span> Сочи-Туапсе-Геленджик</span>
+						<span class="duration"><span>Продолжительность:</span> 12 ч. 30 мин.</span>
+						<div>
+							<span class="price">7 000 руб.</span>
+							<span class="oldPrice">10 000 руб.</span>
+						</div>
+					</div>
+				</div>
+				<div class="cruise b-cruises__lake dev">
+					<img src="images/sea.jpg" class="cruiseImg" alt="">
+					<div class="description">
+						<span class="title">Морская прогулка в Абрау-Дюрсо</span>
+						<span class="route"><span>Маршрут:</span> Сочи-Абрау-Дюрсо</span>
+						<span class="duration"><span>Продолжительность:</span> 11 ч. 0 мин.</span>
+						<span class="price">14 800 руб.</span>
+					</div>	
+				</div>	
+				<div class="cruise b-cruises__novorossiysk tablet mobile">
+					<img src="images/novorossiysk-211521_1920.jpg" class="cruiseImg" alt="">
+					<div class="description">
+						<span class="title">Морской круиз в Новороссийск</span>
+						<span class="route"><span>Маршрут:</span> Сочи-Геленджик-Новороссйиск-Геленджик-Сочи</span>
+						<span class="duration"><span>Продолжительность:</span> 13 ч. 0 мин.</span>
+						<span class="price">14 800 руб.</span>
+					</div>	
+				</div>
+			</div>
+			<button class="header__button button">Больше круизов</button>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__menu">
+				<a href="">Вход для партнеров</a>
+				<a href="">О компании</a>
+				<a href="">Контакты</a>
+			</div>
+			<div class="footer__share">
+				<span>Будь на связи:</span><br>
+				<div>
+					<div class="social"><a href=""><img src="images/vk.png" alt=""></a></div>
+					<div class="social"><a href=""><img src="images/ok.png" alt=""></a></div>
+					<div class="social"><a href=""><img src="images/yt.png" alt=""></a></div>
+					<div class="social"><a href=""><img src="images/insta.png" alt=""></a></div>
+				</div>
+			</div>
+			<div class="info">
+				<span class="header__tel tel">8 800 500-61-05</span><br>
+				Круглосуточная поддержка<br>
+				<span class="copyright">&copy 2016 ООО &laquoГородские Круизы&raquo</span>
+			</div>
+		</div>	
+	</footer>	
+	<script src="scripts/script.js"></script>
+</body>
+</html>
